@@ -2,7 +2,7 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 var level=0;
-$(document).on("keydown",function(){
+$(".start-btn").on("click",function(){
   if(level===0){
   nextSequence();
   }
@@ -51,7 +51,7 @@ function checkAnswer(currentLevel){
     setTimeout(function(){
       $("body").removeClass("game-over");
     },200);
-    $("h1").text("Game Over, Press Any Key to Restart");
+    $("h1").text("Game Over, Press Start Button to Restart");
     console.log("failure");
   }
   if(currentLevel===level-1){

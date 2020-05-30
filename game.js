@@ -21,8 +21,8 @@ $(".end-btn").click(function(){
       // string=string+" "+gamePattern[i];
     }
     $(".hint").text(string);
+    if(level!==0){hints--;}
 
-    hints--;
     $(".end-btn").text("Hints("+hints+")");
   }
   else{

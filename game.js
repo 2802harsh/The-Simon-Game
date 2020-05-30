@@ -2,7 +2,7 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 var level=0;
-$(document).on("keydown",function(){
+$(document).on("keydown touchstart",function(){
   if(level===0){
   nextSequence();
   }

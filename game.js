@@ -22,7 +22,6 @@ $(".end-btn").click(function(){
     }
     $(".hint").text(string);
     if(level!==0){hints--;}
-
     $(".end-btn").text("Hints("+hints+")");
   }
   else{
@@ -84,5 +83,8 @@ function checkAnswer(currentLevel){
 }
 function startOver(){
   level=0;
+  hints=5;
   gamePattern=[];
+  $(".hint").text("");
+  $(".end-btn").text("Hints("+hints+")");
 }

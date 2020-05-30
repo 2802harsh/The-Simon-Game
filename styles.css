@@ -10,6 +10,16 @@ body {
   color: #FEF2BF;
 }
 
+.start-btn{
+  margin:auto auto 2%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  height:50px;
+  border: 5px solid black;
+  border-radius: 10px;
+  background-color: #FEF2BF;
+}
+
 .container {
   display: block;
   width: 50%;

@@ -10,7 +10,7 @@ body {
   color: #FEF2BF;
 }
 
-.start-btn{
+.btn-type2{
   margin:auto auto 2%;
   font-family: 'Press Start 2P', cursive;
   font-size: 1.5rem;
@@ -60,4 +60,9 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+.hint{
+  color:#fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.25rem;
 }

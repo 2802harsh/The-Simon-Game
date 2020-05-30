@@ -2,11 +2,33 @@ var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
 var level=0;
+var hints=5;
 $(".start-btn").on("click",function(){
   if(level===0){
   nextSequence();
   }
-})
+});
+$(".end-btn").click(function(){
+  if(hints>0)
+  {
+    var string="";
+    for(var i=0;i<gamePattern.length;i++)
+    {
+      if(gamePattern[i]=="red"){string+="🔴"};
+      if(gamePattern[i]=="yellow"){string+="🟡"};
+      if(gamePattern[i]=="green"){string+="🟢"};
+      if(gamePattern[i]=="blue"){string+="🔵"};
+      // string=string+" "+gamePattern[i];
+    }
+    $(".hint").text(string);
+
+    hints--;
+    $(".end-btn").text("Hints("+hints+")");
+  }
+  else{
+    $(".end-btn").text("Hints Over");
+  }
+});
 
 $(".btn").on("click",function() {
   var userChosenColour = $(this).attr("id");
